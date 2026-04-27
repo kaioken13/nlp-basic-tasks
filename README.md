@@ -1,47 +1,47 @@
 # 🕵️‍♂️ Fake News Detection Engine
 
-Este repositório contém uma solução de Processamento de Linguagem Natural (NLP) desenvolvida para classificar e analisar notícias, identificando padrões de desinformação. O projeto abrange desde o pré-processamento de texto até a modelagem estatística e extração de tópicos latentes.
+This repository features a robust Natural Language Processing (NLP) solution designed to classify and analyze news authenticity. The project covers the full end-to-end data pipeline, from raw text heuristic cleaning to statistical modeling and latent topic extraction.
 
 ---
 
-### 🚀 Tecnologias Utilizadas
-* **Linguagem:** Python 3.12
-* **Processamento de Texto:** NLTK, Spacy, Regex
-* **Vetorização e Modelagem:** Scikit-Learn (TF-IDF, Bag of Words)
-* **Extração de Tópicos:** Gensim (LDA, LSA)
-* **Visualização de Dados:** Seaborn, Matplotlib
+### 🚀 Tech Stack
+* **Language:** Python 3.12
+* **NLP & Text Processing:** NLTK, Spacy, Regular Expressions (Regex)
+* **Vectorization:** Scikit-Learn (TF-IDF, Bag of Words)
+* **Topic Modeling:** Gensim (LDA, LSA)
+* **Data Visualization:** Seaborn, Matplotlib
 
 ---
 
-### 🧠 Arquitetura e Metodologia
+### 🧠 Architecture & Methodology
 
-#### 1. Pré-processamento e Limpeza (Data Cleaning)
-* Normalização de texto com **Expressões Regulares** para remoção de ruídos e caracteres especiais.
-* Tokenização e remoção de *stopwords*.
-* Reconstrução de strings limpas para vetorização.
+#### 1. Preprocessing & Data Cleaning
+* **Heuristic Cleaning:** Normalized text using **Regex** to remove noise, special characters, and HTML artifacts.
+* **Tokenization:** Applied stopword removal and lemmatization to reduce vocabulary dimensionality.
+* **Pipeline:** Efficient string reconstruction using optimized join operations for vectorization readiness.
 
-#### 2. Engenharia de Features e Extração de Tópicos
-* **TF-IDF & Bag of Words:** Transformação de texto em vetores numéricos ponderados.
-* **LSA (Latent Semantic Analysis):** Redução de dimensionalidade para encontrar relações semânticas latentes.
-* **LDA (Latent Dirichlet Allocation):** Modelagem probabilística de tópicos para identificar os principais temas nos datasets.
-* **Coherence Score ($C_v$):** Utilizado para validar a interpretabilidade dos tópicos gerados.
+#### 2. Feature Engineering & Topic Modeling
+* **TF-IDF & BoW:** Engineered weighted numerical vectors to represent semantic importance.
+* **LSA (Latent Semantic Analysis):** Applied SVD for dimensionality reduction and latent relationship identification.
+* **LDA (Latent Dirichlet Allocation):** Implemented probabilistic modeling to discover underlying themes within the datasets.
+* **Coherence Score ($C_v$):** Used to quantitatively validate the interpretability and quality of the generated topics.
 
-#### 3. Modelos de Classificação
-O projeto compara a performance de dois algoritmos fundamentais:
-* **Logistic Regression:** Utilizado como baseline de alta performance e interpretabilidade.
-* **SVM (Support Vector Machines):** Aplicado para capturar hiperplanos de separação mais complexos no espaço vetorial das palavras.
-
----
-
-### 📊 Visualizações e Insights
-O notebook inclui análises visuais de:
-* Distribuição de Unigramas e Bigramas.
-* Gráficos de Entidades Nomeadas (NER) mais frequentes.
-* Curvas de Coerência para definição do número ideal de tópicos.
+#### 3. Classification Models
+The project evaluates and benchmarks two core algorithms:
+* **Logistic Regression:** Used as a high-performance baseline for linear decision boundaries.
+* **SVM (Support Vector Machines):** Implemented to capture complex hyperplanes in the high-dimensional word-vector space.
 
 ---
 
-### 🛠️ Como Instalar e Rodar
-1. **Clone o repositório:**
+### 📊 Visualization & Insights
+The notebook includes detailed visual analysis of:
+* Distribution of Unigrams, Bigramas, and Trigrams.
+* Named Entity Recognition (NER) frequency analysis.
+* Coherence curves for optimal topic $K$ selection.
+
+---
+
+### 🛠️ Installation & Usage
+1. **Clone the repository:**
    ```bash
-   git clone [https://github.com/seu-usuario/fake-news-detector.git](https://github.com/seu-usuario/fake-news-detector.git)
+   git clone [https://github.com/your-username/fake-news-detector.git](https://github.com/your-username/fake-news-detector.git)
